@@ -24,7 +24,6 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryResponse createCategory(CategoryRequest request) {
         Category category = categoryConverter.createCategory(request);
         Category savedCategory = categoryRepository.save(category);
-
         return categoryConverter.toCategoryResponse(savedCategory);
     }
 
