@@ -31,11 +31,20 @@ public class Food {
     @NotNull
     private Double price;
 
-//    @NotNull
-//    private Byte[] foodBanner;
+    @NotNull
+    private byte[] foodBanner;
 
-    @OneToMany(mappedBy = "food", cascade = CascadeType.ALL)
-    private List<Extra> ExtrasList = new ArrayList<>();
+//    @OneToMany(mappedBy = "food", cascade = CascadeType.ALL)
+//    private List<Extra> ExtrasList = new ArrayList<>();
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Food> foodList = new ArrayList<>();
+
+    @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
+    private Category category;
+
+    @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
+    private Restaurant restaurant;
 
 
 }

@@ -29,7 +29,7 @@ public class Extra {
     @NotNull
     private Double extraPrice;
 
-    @ManyToOne
-    @JoinColumn(name = "food_id")
-    private Food food;
+//    @ManyToOne
+//    @JoinColumn(name = "food_id")
+//    private Food food;
 }

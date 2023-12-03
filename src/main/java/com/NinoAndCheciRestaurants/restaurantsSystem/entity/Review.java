@@ -23,4 +23,7 @@ public class Review {
     @ManyToOne
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
+
+    @ManyToOne
+    private User user;
 }
