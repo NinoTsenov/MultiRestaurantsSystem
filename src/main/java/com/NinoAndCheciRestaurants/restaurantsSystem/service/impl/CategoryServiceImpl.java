@@ -38,6 +38,7 @@ public class CategoryServiceImpl implements CategoryService {
                 ()-> new RuntimeException("Category not found !"));
         category.setCategoryName(request.getCategoryName());
         category.setCategoryDescription(request.getCategoryDescription());
+        categoryRepository.save(category);
 
         return categoryConverter.toCategoryResponse(category);
     }

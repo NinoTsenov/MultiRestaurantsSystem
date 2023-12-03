@@ -38,6 +38,7 @@ public class PersonServiceImpl implements PersonService {
         Person foundPerson = personRepository.findById(id).orElseThrow(()-> new RuntimeException("Person not found"));
         foundPerson.setPersonName(request.getPersonName());
         foundPerson.setPersonPhone(request.getPersonPhone());
+        personRepository.save(foundPerson);
         return personConverter.toPersonResponse(foundPerson);
     }
 

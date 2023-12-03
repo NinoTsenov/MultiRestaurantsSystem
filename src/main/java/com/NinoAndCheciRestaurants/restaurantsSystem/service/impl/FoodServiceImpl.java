@@ -39,6 +39,7 @@ public class FoodServiceImpl implements FoodService
                 ()-> new RuntimeException("Food not found !"));
         food.setFoodName(request.getFoodName());
         food.setFoodDescription(request.getFoodDescription());
+        foodRepository.save(food);
 
         return foodConverter.toFoodResponse(food);
     }

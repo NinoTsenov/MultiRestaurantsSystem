@@ -1,7 +1,7 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.dto;
 import lombok.*;
 
-import java.util.List;
+
 
 
 @AllArgsConstructor
@@ -26,5 +26,4 @@ public class FoodResponse
     // TODO
 //    private RestaurantResponse restaurant;
 
-    private List<FoodResponse> food;
 }

@@ -1,6 +1,6 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.dto;
 import lombok.*;
-import java.util.List;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,8 +16,9 @@ public class FoodRequest
     private Double price;
 
     private Long categoryId;
-    private Long restaurantId;
 
-    private List<Long> foodId;
+ //   private Long restaurantId;
+
+
     private String foodBanner;
 }
