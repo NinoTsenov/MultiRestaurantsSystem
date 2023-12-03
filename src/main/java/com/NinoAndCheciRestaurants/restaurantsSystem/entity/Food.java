@@ -34,9 +34,6 @@ public class Food {
     @NotNull
     private byte[] foodBanner;
 
-//    @OneToMany(mappedBy = "food", cascade = CascadeType.ALL)
-//    private List<Extra> ExtrasList = new ArrayList<>();
-
     @OneToMany(cascade = CascadeType.ALL)
     private List<Food> foodList = new ArrayList<>();
 

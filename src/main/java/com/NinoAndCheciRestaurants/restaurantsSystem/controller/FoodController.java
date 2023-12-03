@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-/**
- * Created by alexander.yordanov on 2023-12-03.
- */
 @RestController
 @RequestMapping("/api/v1/food")
 @RequiredArgsConstructor

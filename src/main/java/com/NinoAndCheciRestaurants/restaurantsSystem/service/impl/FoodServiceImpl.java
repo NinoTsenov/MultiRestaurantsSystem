@@ -1,5 +1,4 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.service.impl;
-
 import com.NinoAndCheciRestaurants.restaurantsSystem.converter.FoodConverter;
 import com.NinoAndCheciRestaurants.restaurantsSystem.dto.FoodRequest;
 import com.NinoAndCheciRestaurants.restaurantsSystem.dto.FoodResponse;
@@ -12,9 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by alexander.yordanov on 2023-12-03.
- */
 @Service
 @AllArgsConstructor
 public class FoodServiceImpl implements FoodService

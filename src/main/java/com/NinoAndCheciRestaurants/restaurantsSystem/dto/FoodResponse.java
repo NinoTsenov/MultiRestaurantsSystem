@@ -1,14 +1,8 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.dto;
-
 import lombok.*;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 
-/**
- * Created by alexander.yordanov on 2023-12-03.
- */
 
 @AllArgsConstructor
 @NoArgsConstructor

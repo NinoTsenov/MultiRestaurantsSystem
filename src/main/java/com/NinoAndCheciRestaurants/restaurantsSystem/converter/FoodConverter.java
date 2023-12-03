@@ -5,7 +5,7 @@ import com.NinoAndCheciRestaurants.restaurantsSystem.dto.FoodResponse;
 import com.NinoAndCheciRestaurants.restaurantsSystem.entity.Food;
 import com.NinoAndCheciRestaurants.restaurantsSystem.repository.CategoryRepository;
 import com.NinoAndCheciRestaurants.restaurantsSystem.repository.FoodRepository;
-import com.NinoAndCheciRestaurants.restaurantsSystem.service.CategoryService;
+
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
