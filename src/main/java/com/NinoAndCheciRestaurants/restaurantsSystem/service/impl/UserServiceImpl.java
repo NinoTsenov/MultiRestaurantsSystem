@@ -22,9 +22,7 @@ public class UserServiceImpl implements UserService {
     public UserResponse createUser(UserRequest request) {
         User user = userConverter.createUser(request);
         User savedUser = userRepository.save(user);
-        UserResponse createdUser = userConverter.toUserResponse(savedUser);
-
-        return createdUser;
+        return userConverter.toUserResponse(savedUser);
     }
 
     @Override
