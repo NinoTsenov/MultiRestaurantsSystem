@@ -10,4 +10,9 @@ public interface FoodService
     void deleteFoodById (Long id);
     FoodResponse updateFood (Long id, FoodRequest request);
     List<FoodResponse> getAllFoods();
+
+//    searchByRestaurant
+//    searchByCategory
+//    searchByRestaurantAndCategory
+
 }

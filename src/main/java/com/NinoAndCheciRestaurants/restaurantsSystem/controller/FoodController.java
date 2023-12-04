@@ -27,7 +27,7 @@ public class FoodController
     }
 
     @GetMapping("/getAllFood")
-    public ResponseEntity<List<FoodResponse>> getAllCategories(){
+    public ResponseEntity<List<FoodResponse>> getAllFoods(){
         return ResponseEntity.status(HttpStatus.OK).body(foodService.getAllFoods());
     }
 
