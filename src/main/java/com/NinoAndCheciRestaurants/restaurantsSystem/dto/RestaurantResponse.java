@@ -1,25 +1,20 @@
-package com.NinoAndCheciRestaurants.restaurantsSystem.entity;
+package com.NinoAndCheciRestaurants.restaurantsSystem.dto;
 
-import jakarta.persistence.*;
+import com.NinoAndCheciRestaurants.restaurantsSystem.entity.Review;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "Restaurants")
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class Restaurant {
+public class RestaurantResponse {
 
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
@@ -37,9 +32,8 @@ public class Restaurant {
     @NotBlank
     private String restaurantEmail;
 
-  //  private Byte[] restaurantBanner;
+    //  private Byte[] restaurantBanner;
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
     private List<Review> reviews;
-
 }
