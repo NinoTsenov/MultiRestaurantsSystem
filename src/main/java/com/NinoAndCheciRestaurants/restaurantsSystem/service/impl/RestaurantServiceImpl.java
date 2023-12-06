@@ -20,16 +20,21 @@ public class RestaurantServiceImpl implements RestaurantService {
 
     @Override
     public RestaurantResponse createRestaurant(RestaurantRequest request) {
-        return null;
+        Restaurant restaurant = restaurantConverter.createRestaurant(request);
+        Restaurant savedRestaurant = restaurantRepository.save(restaurant);
+        return restaurantConverter.toRestaurantResponse(savedRestaurant) ;
     }
 
     @Override
     public void deleteRestaurantById(Long id) {
-
+        restaurantRepository.deleteById(id);
     }
 
     @Override
     public Restaurant updateRestaurant(Long id, RestaurantRequest request) {
+        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(
+                ()-> new RuntimeException("Restaurant not found"));
+
         return null;
     }
 
