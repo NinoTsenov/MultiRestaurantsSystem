@@ -1,6 +1,4 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.service;
-
-
 import com.NinoAndCheciRestaurants.restaurantsSystem.dto.UserRequest;
 import com.NinoAndCheciRestaurants.restaurantsSystem.dto.UserResponse;
 import com.NinoAndCheciRestaurants.restaurantsSystem.entity.User;
@@ -13,4 +11,8 @@ public interface UserService {
     void deleteUserById (Long id);
     User updateUser (Long id, UserRequest request);
     List<UserResponse> getAllUsers();
+
+    // TODO
+    // User -> make comment to particular Restaurant
+    // User -> make order to particular Restaurant
 }
