@@ -5,7 +5,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
+
 
 
 @AllArgsConstructor
@@ -21,12 +21,6 @@ public class ReviewRequest {
 
     @NotBlank
     private String comment;
-
-    @NotNull
-    private Restaurant restaurant;
-
-    @NotNull
-    private LocalDateTime createdAt;
 
 //TODO
 //    private User user;

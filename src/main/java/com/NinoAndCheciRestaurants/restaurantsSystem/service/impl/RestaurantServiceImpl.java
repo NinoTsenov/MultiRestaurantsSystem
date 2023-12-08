@@ -65,4 +65,11 @@ public class RestaurantServiceImpl implements RestaurantService {
         }
         return allRestaurantsResponse;
     }
+
+    @Override
+    public RestaurantResponse findRestaurantById(Long id) {
+        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(
+                ()-> new RuntimeException("Restaurant not found"));
+        return restaurantConverter.toRestaurantResponse(restaurant);
+    }
 }

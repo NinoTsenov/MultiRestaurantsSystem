@@ -1,4 +1,5 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.entity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,12 +30,13 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "restaurant_id", nullable = false)
+    @JsonBackReference
     private Restaurant restaurant;
 
-    @Column(name = "created", nullable = false)
+    @Column(name = "created")
     private LocalDateTime createdAt;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id")
     private User user;
 }

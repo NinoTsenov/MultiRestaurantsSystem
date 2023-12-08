@@ -34,6 +34,5 @@ public class RestaurantResponse {
 
     //  private Byte[] restaurantBanner;
 
-    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
-    private List<Review> reviews;
+    private Double rating;
 }

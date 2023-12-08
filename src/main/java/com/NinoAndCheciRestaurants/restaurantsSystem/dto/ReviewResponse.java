@@ -20,7 +20,7 @@ public class ReviewResponse {
 
     private String comment;
 
-    private Restaurant restaurant;
+    private String restaurant;
 
     private LocalDateTime createdAt;
 

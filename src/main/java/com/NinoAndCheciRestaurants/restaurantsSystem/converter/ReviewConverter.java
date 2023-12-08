@@ -35,7 +35,7 @@ public class ReviewConverter {
                 .id(review.getId())
                 .numberStars(review.getNumberStars())
                 .comment(review.getComment())
-                .restaurant(review.getRestaurant())
+                .restaurant(review.getRestaurant().getRestaurantName())
                 .createdAt(review.getCreatedAt())
                 .build();
     }
