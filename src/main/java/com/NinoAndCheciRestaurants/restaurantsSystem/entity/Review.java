@@ -2,7 +2,7 @@ package com.NinoAndCheciRestaurants.restaurantsSystem.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 
 
@@ -21,7 +21,7 @@ public class Review {
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "rating", nullable = true)
+    @Column(name = "rating", nullable = false)
     private Integer numberStars;
 
     @Column(name = "comment", nullable = false, length = 1000)
@@ -31,7 +31,7 @@ public class Review {
     @JoinColumn(name = "restaurant_id", nullable = false)
     private Restaurant restaurant;
 
-    @Column(name = "created", nullable = true)
+    @Column(name = "created", nullable = false)
     private LocalDateTime createdAt;
 
     @ManyToOne
