@@ -1,17 +1,14 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.converter;
-
 import com.NinoAndCheciRestaurants.restaurantsSystem.dto.RestaurantRequest;
 import com.NinoAndCheciRestaurants.restaurantsSystem.dto.RestaurantResponse;
-import com.NinoAndCheciRestaurants.restaurantsSystem.dto.ReviewResponse;
 import com.NinoAndCheciRestaurants.restaurantsSystem.entity.Restaurant;
-
 import com.NinoAndCheciRestaurants.restaurantsSystem.entity.Review;
 import com.NinoAndCheciRestaurants.restaurantsSystem.repository.ReviewRepository;
 import com.NinoAndCheciRestaurants.restaurantsSystem.service.ReviewService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Component

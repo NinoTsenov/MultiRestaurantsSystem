@@ -1,12 +1,8 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.dto;
-
-import com.NinoAndCheciRestaurants.restaurantsSystem.entity.Review;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.OneToMany;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
-import java.util.List;
+
 
 @AllArgsConstructor
 @NoArgsConstructor

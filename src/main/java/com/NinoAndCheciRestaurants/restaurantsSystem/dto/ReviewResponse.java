@@ -1,5 +1,5 @@
 package com.NinoAndCheciRestaurants.restaurantsSystem.dto;
-import com.NinoAndCheciRestaurants.restaurantsSystem.entity.Restaurant;
+
 import lombok.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
