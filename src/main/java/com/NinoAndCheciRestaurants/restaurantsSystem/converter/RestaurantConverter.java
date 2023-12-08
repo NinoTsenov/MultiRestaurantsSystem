@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 
 
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalDouble;
 
 @Component
 @AllArgsConstructor
@@ -42,22 +44,30 @@ public class RestaurantConverter {
         response.setRating(rating);
         return response;
     }
-
     public double calculateAverageRating(Restaurant restaurant) {
         List<Review> allReviews = reviewRepository.findAll();
-        if (allReviews == null || allReviews.isEmpty()) {
-            return 0.0;
-        }
-        int totalStars = 0;
-        int validReviewsCount = 0;
 
-        for (Review review : allReviews) {
-            Integer numberStars = review.getNumberStars();
-            if (numberStars != null) {
-                totalStars += numberStars;
-                validReviewsCount++;
-            }
-        }
-        return validReviewsCount > 0 ? (double) totalStars / validReviewsCount : 0.0;
+        OptionalDouble average = allReviews.stream()
+                .mapToInt(review -> Optional.ofNullable(review.getNumberStars()).orElse(0))
+                .average();
+        return Math.round(average.orElse(0.0)*100.0)/100.0;
     }
+
+//    public double calculateAverageRating(Restaurant restaurant) {
+//        List<Review> allReviews = reviewRepository.findAll();
+//        if (allReviews == null || allReviews.isEmpty()) {
+//            return 0.0;
+//        }
+//        int totalStars = 0;
+//        int validReviewsCount = 0;
+//
+//        for (Review review : allReviews) {
+//            Integer numberStars = review.getNumberStars();
+//            if (numberStars != null) {
+//                totalStars += numberStars;
+//                validReviewsCount++;
+//            }
+//        }
+//        return validReviewsCount > 0 ? (double) totalStars / validReviewsCount : 0.0;
+//    }
 }
